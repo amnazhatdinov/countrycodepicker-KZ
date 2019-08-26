@@ -1,0 +1,23 @@
+buildscript {
+  repositories {
+    jcenter()
+    google()
+  }
+  dependencies {
+    classpath 'com.android.tools.build:gradle:3.4.2'
+    classpath 'com.github.dcendents:android-maven-gradle-plugin:2.1'
+  }
+}
+
+allprojects {
+  repositories {
+    jcenter()
+    google()
+    maven { url "https://jitpack.io" }
+    mavenLocal()
+  }
+}
+
+task clean(type: Delete) {
+  delete rootProject.buildDir
+}
